@@ -5,5 +5,6 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     site: 'https://tiamei.design',
     output: 'static',
-    outDir: './docs'
+    outDir: './docs',
+    build: {  assets: 'astro-assets' },
 });
