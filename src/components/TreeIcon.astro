@@ -1,0 +1,28 @@
+---
+import tree0 from '../assets/icons/tree-0.png';
+import tree1 from '../assets/icons/tree-1.png';
+import tree2 from '../assets/icons/tree-2.png';
+import tree3 from '../assets/icons/tree-3.png';
+import treeTall0 from '../assets/icons/tree-tall-0.png';
+import treeTall1 from '../assets/icons/tree-tall-1.png';
+import treeTall2 from '../assets/icons/tree-tall-2.png';
+import treeTall3 from '../assets/icons/tree-tall-3.png';
+
+const Icons = [tree0, tree1, tree2, tree3];
+const IconsTall = [treeTall0, treeTall1, treeTall2, treeTall3];
+
+const { level, size: sizeRaw, variant } = Astro.props;
+const icon = (variant === 'tall' ? IconsTall : Icons)[level] || tree0;
+const R = (variant === 'tall' ? 248 / 128 : 1);
+
+const size = sizeRaw ?? 48;
+const width = Math.round(size / R);
+const height = size;
+---
+
+<img
+  src={icon.src}
+  alt={`Tree level ${level}`}
+  width={width}
+  height={height}
+/>

@@ -1,0 +1,76 @@
+---
+import Hero from '../components/Hero.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
+import Layout from '../layouts/Layout.astro';
+import PlantDivider from '../components/PlantDivider.astro';
+import DesignCard from '../components/DesignCard.astro';
+
+import mposBanner from '../assets/banners/mpos.svg';
+import txrhBanner from '../assets/banners/texas-roadhouse.svg';
+import apprendoBanner from '../assets/banners/apprendo.svg';
+---
+
+<Layout>
+	<Hero />
+	<FeatureGrid />
+
+	<PlantDivider level={3} />
+
+	<DesignCard
+		title="mPos"
+		imgAlign="right"
+		imageSrc={mposBanner.src}
+		imageAlt="mPos Design System"
+		links={[
+			{ href: 'https://www.figma.com/design/rRTZlNqLE9FPoTu4IKiDk7/mPos?node-id=0-1&p=f&t=9CSrzxGACixsWAGS-0', text: 'Figma File', target: '_blank' },
+		]}
+	>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</DesignCard>
+
+	<PlantDivider level={2} />
+
+	<DesignCard
+		title="Texas Roadhouse"
+		imgAlign="left"
+		imageSrc={txrhBanner.src}
+		imageAlt="mPos Design System"
+		links={[
+			{ href: 'https://nimble.li/a983rend', text: 'Figma File', target: '_blank' },
+		]}
+	>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</DesignCard>
+
+	<PlantDivider level={1} />
+
+	<DesignCard
+		title="Apprendo"
+		imgAlign="right"
+		imageSrc={apprendoBanner.src}
+		imageAlt="mPos Design System"
+		links={[
+			{ href: 'https://purrfect-top-743.notion.site/Apprendo-Case-Study-105ba894a1eb802d8f6de12bdad9e979', text: 'Case Study', target: '_blank' },
+		]}
+	>
+		<p>Apprendo is a free learning app designed to support BRIDGEGOOD UX apprentices and empower creatives of color in the tech and design fields.</p>
+		<p>Over 4 weeks, I completed this case study as part of Google’s Tech Equity Collective, using Google’s Design Sprint methodology to research, prototype, and validate solutions that address barriers faced by underrepresented creatives.</p>
+		<p>Using tools such as Figma, Miro, Slack, Discord, and Google Workspace, I strengthened my skills in project leadership, collaboration, and end-to-end UX design while learning how to guide a team toward building impactful, equity-driven solutions.</p>
+	</DesignCard>
+
+	<PlantDivider level={0} />
+
+	<DesignCard
+		title="ConDex"
+		imgAlign="left"
+		imageSrc={mposBanner.src}
+		imageAlt="mPos Design System"
+		links={[
+			{ href: 'https://www.figma.com/proto/yPKlmW1SMPQzRkL9NSR16f/Con-Dex-Hi-Fi-Prototype?node-id=2150-452&p=f&t=zthXFZfXUL2VPHyb-0&scaling=min-zoom&content-scaling=fixed&page-id=2150%3A432 ', text: 'Case Study', target: '_blank' },
+		]}
+	>
+		<p>Con-Dex is a mobile app that helps convention vendors streamline operations by tracking applications, sales, inventory, and finances in one place.</p>
+		<p>Over 10 weeks, I completed this case study as part of Google’s UX Design Certification, applying the design thinking process and conducting interviews with multiple vendors to shape the app.</p>
+		<p>Using tools such as Figma, Miro, Lucidchart, and Google Docs, I strengthened my skills in user research, prototyping, and iteration while learning how to design solutions that directly address vendor needs.</p>
+	</DesignCard>
+</Layout>

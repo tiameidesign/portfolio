@@ -1,0 +1,36 @@
+---
+import TreeIcon from './TreeIcon.astro';
+
+export interface Props {
+  level: number;
+}
+
+const { level } = Astro.props;
+---
+
+<div class="plant-divider">
+  <div class="line"></div>
+  <TreeIcon level={level} variant='tall' />
+  <div class="line"></div>
+</div>
+
+<style>
+  .plant-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+
+  .line {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+  }
+
+  .plant-divider :global(img) {
+    margin: 0 1rem;
+    flex-shrink: 0;
+  }
+</style>

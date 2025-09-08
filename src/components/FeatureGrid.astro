@@ -1,0 +1,121 @@
+---
+---
+
+<section class="features">
+	<div class="container">
+		<div class="grid">
+			<div class="feature">
+				<div class="icon laptop">
+					<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="8" y="4" width="44" height="28" rx="2" stroke="#2c5530" stroke-width="2" fill="none"/>
+						<rect x="4" y="32" width="52" height="4" rx="2" fill="#2c5530"/>
+						<rect x="12" y="8" width="36" height="20" fill="#a8d5ba"/>
+					</svg>
+				</div>
+				<h3>Working at</h3>
+				<p><a href="https://careers.becomearoadie.com/us/en/c/support-center-jobs">Texas Roadhouse Support Center</a></p>
+				<p>Previously <a href="https://bridgegood.org/">BRIDGEGOOD</a></p>
+			</div>
+
+			<div class="feature">
+				<div class="icon handshake">
+					<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15 25 L25 15 L35 25 L45 15" stroke="#2c5530" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+						<circle cx="20" cy="20" r="3" fill="#2c5530"/>
+						<circle cx="40" cy="20" r="3" fill="#2c5530"/>
+					</svg>
+				</div>
+				<h3>Committed to</h3>
+				<p>Designing for<br>inclusive accessible<br>user experiences</p>
+			</div>
+
+			<div class="feature">
+				<div class="icon person">
+					<svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="30" cy="15" r="8" fill="#2c5530"/>
+						<path d="M15 35 Q30 25 45 35" fill="#2c5530"/>
+						<circle cx="25" cy="12" r="2" fill="white"/>
+						<circle cx="35" cy="12" r="2" fill="white"/>
+						<path d="M26 18 Q30 20 34 18" stroke="white" stroke-width="1.5" fill="none"/>
+					</svg>
+				</div>
+				<h3>Fueled by</h3>
+				<p>Exercise, iced lattes,<br>music, pastries, and<br>audiobooks (in that<br>order)</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.features {
+		padding: 2rem 0 4rem;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 3rem;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.feature {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.icon {
+		margin-bottom: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h3 {
+		color: #2c5530;
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin: 0 0 1rem 0;
+	}
+
+	p {
+		color: #666;
+		font-size: 1rem;
+		line-height: 1.5;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.features {
+			padding: 2rem 0;
+		}
+		
+		.container {
+			padding: 0 1rem;
+		}
+		
+		.grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+		
+		h3 {
+			font-size: 1.25rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.5rem;
+		}
+	}
+</style>

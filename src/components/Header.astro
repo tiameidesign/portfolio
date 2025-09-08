@@ -1,0 +1,116 @@
+---
+import TreeIcon from './TreeIcon.astro';
+
+import screenIcon from '../assets/icons/screen.svg';
+import silhouetteIcon from '../assets/icons/silhouette.svg';
+import resumeIcon from '../assets/icons/resume-download.svg';
+---
+
+<header>
+	<div class="container">
+		<div class="logo">
+			<span>Tia Mei</span>
+			<TreeIcon level={3} size={32} />
+		</div>
+		<nav>
+			<ul>
+				<li>
+					<a href="/">
+						Designs
+						<img src={screenIcon.src} alt="Designs" width="24px" height="24px" />
+					</a>
+				</li>
+				<li>
+					<a href="/about">
+						About
+						<img src={silhouetteIcon.src} alt="About" width="24px" height="24px" />
+					</a>
+				</li>
+				<li>
+					<a href="/Tia-Mei-Resume-6-2025.pdf" target="_blank" download="Tia-Mei-Resume-6-2025.pdf">
+						Resume
+						<img src={resumeIcon.src} alt="Resume" width="24px" height="24px" />
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<style>
+	header {
+		//background: linear-gradient(135deg, #a8d5ba, #7fb69e);
+		background: var(--color-primary--light);
+		margin: 0;
+		padding: 1rem 0;
+		position: fixed;
+		width: 100%;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		font-size: 18px;
+		font-weight: bold;
+		color: var(--color-primary2--dark);
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2rem;
+	}
+
+	nav ul {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		gap: 3rem;
+	}
+
+	nav li {
+		display: flex;
+		height: 100%;
+	}
+
+	nav a {
+		color: var(--color-primary2--dark);
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 18px;
+		transition: color 0.2s;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		height: 100%;
+	}
+
+	nav a:hover {
+		color: #1a3a1e;
+	}
+
+	@media (max-width: 768px) {
+		.container {
+			padding: 0 1rem;
+		}
+		
+		nav ul {
+			gap: 1.5rem;
+		}
+		
+		nav a {
+			font-size: 16px;
+		}
+		
+		.logo-circle {
+			width: 60px;
+			height: 60px;
+			font-size: 12px;
+		}
+	}
+</style>
