@@ -1,9 +1,12 @@
 ---
----
+import LogoIcon from './icons/LogoIcon.astro';---
 
 <section class="hero">
 	<div class="container">
-		<h1>Tia Mei</h1>
+		<h1 class="tiamei-logo">
+			<LogoIcon alt="Tia Mei Logo" />
+			<span class="hidden">Tia Mei</span>
+		</h1>
 		<p class="tagline">her user experience narrative at a glance...</p>
 		<!--<p class="intro">Hi Hi! I am Tia Mei and I am a User Experience Designer located in Louisville, Kentucky!</p>-->
 	</div>
@@ -27,6 +30,21 @@
 		margin: 0 0 1rem 0;
 		font-weight: bold;
 		line-height: 1.1;
+	}
+
+	.tiamei-logo {
+		height: 4rem;
+		margin: 0 -8px;
+		vertical-align: middle;
+		position: relative;
+	}
+
+	.hidden {
+		color: transparent;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.tagline {
