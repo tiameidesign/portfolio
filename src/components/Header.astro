@@ -1,5 +1,5 @@
 ---
-import TreeIcon from './TreeIcon.astro';
+import treeLogo from '../assets/icons/tree-3.png';
 
 import ScreenIcon from './icons/ScreenIcon.astro';
 import SilhouetteIcon from './icons/SilhouetteIcon.astro';
@@ -8,9 +8,14 @@ import ResumeDownloadIcon from './icons/ResumeDownloadIcon.astro';
 
 <header>
 	<div class="container">
-		<a class="logo" href="/">
+		<a class="logo active" href="/">
 			<span>Tia Mei</span>
-			<TreeIcon level={3} size={32} />
+			<img
+				src={treeLogo.src}
+				alt={`Tree Logo`}
+				width={32}
+				height={32}
+			/>
 		</a>
 		<nav>
 			<ul>
@@ -45,7 +50,6 @@ import ResumeDownloadIcon from './icons/ResumeDownloadIcon.astro';
 
 <style>
 	header {
-		//background: linear-gradient(135deg, #a8d5ba, #7fb69e);
 		background: var(--color-primary--dark);
 		color: var(--color-secondary);
 		margin: 0;
@@ -61,7 +65,6 @@ import ResumeDownloadIcon from './icons/ResumeDownloadIcon.astro';
 		gap: 1rem;
 		font-size: 18px;
 		font-weight: bold;
-		color: var(--color-primary2--dark);
 	}
 
 	.container {
@@ -87,7 +90,6 @@ import ResumeDownloadIcon from './icons/ResumeDownloadIcon.astro';
 	}
 
 	header a {
-		color: var(--color-primary2--dark);
 		text-decoration: none;
 		font-weight: 600;
 		font-size: 16px;
@@ -99,6 +101,7 @@ import ResumeDownloadIcon from './icons/ResumeDownloadIcon.astro';
 		padding: 0.5rem 1rem;
 		border-radius: 20px;
 		cursor: pointer;
+		color: var(--color-secondary);
 	}
 
 	header a:hover,
