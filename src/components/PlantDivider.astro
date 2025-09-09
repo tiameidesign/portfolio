@@ -3,24 +3,39 @@ import TreeIcon from './TreeIcon.astro';
 
 export interface Props {
   level: number;
+  subtitle?: boolean;
 }
 
-const { level } = Astro.props;
+const { level, subtitle = false } = Astro.props;
 ---
 
 <div class="plant-divider">
-  <div class="line"></div>
-  <TreeIcon level={level} variant='tall' />
-  <div class="line"></div>
+  <div class="divider-line">
+    <div class="line"></div>
+    <TreeIcon level={level} variant='tall' />
+    <div class="line"></div>
+  </div>
+  {subtitle && (
+    <div class="subtitle">
+      <slot />
+    </div>
+  )}
 </div>
 
 <style>
   .plant-divider {
-    display: flex;
-    align-items: center;
     width: 100%;
     padding: 0 2rem;
     box-sizing: border-box;
+    position: relative;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .divider-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 
   .line {
@@ -29,8 +44,25 @@ const { level } = Astro.props;
     background-color: #ccc;
   }
 
-  .plant-divider :global(img) {
+  .divider-line :global(img) {
     margin: 0 1rem;
     flex-shrink: 0;
+  }
+
+  .subtitle {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 2rem;
+    font-size: 0.875rem;
+    color: #666;
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .subtitle {
+      bottom: -1rem;
+      left: 2rem;
+    }
   }
 </style>
